@@ -443,7 +443,7 @@ body {
 .typography h5,
 .typography h6,
 .progress-bars .title,
-.panels .title {
+.panels .title, .components .title {
 	font-family: roboto;
 	font-weight: 700;
 	line-height: 1.5em;
@@ -453,7 +453,7 @@ body {
 
 .typography .title,
 .progress-bars .title,
-.panels .title {
+.panels .title, .components .title {
 	font-size: 28px;
 	margin-bottom: 20px;
 }
@@ -607,8 +607,6 @@ body {
 	border-right: 5px solid orangered;
 	padding-right: 20px;
 }
-
-.contact {}
 
 .contact .contact-form {
 	color: #596372;
@@ -960,7 +958,11 @@ footer {
 	background-color: #596372;
 }
 .components {
-	
+	margin-top: 30px;
+}
+.components .section{
+	padding: 30px;
+	margin-bottom: 10px;
 }
 .components .btn {
 	border-radius: 2px;
@@ -1058,8 +1060,8 @@ footer {
 }
 .components .call-action {
 	border-radius: 50px;
-	font-size: 25px;
-	padding: 10px 20px;
+	font-size: 15px;
+	padding: 6px 16px;
 }
 
 .components a.btn {
@@ -1086,7 +1088,10 @@ footer {
 	font-size: 14px;
 }
 .components .button-sizes .btn-medium {
-	font-size: 21px;
+	font-size: 18px;
+}
+.components .button-sizes .btn-lg {
+	font-size: 24px;
 }
 .components .tabs .tab-buttons {
 	position: relative;
@@ -1100,19 +1105,19 @@ footer {
   width: 100%;
   bottom: 0px;
   left: 0;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.4);
 }
 .components .tabs-left .tab-buttons:after {
   height: 100%;
   bottom: 0px;
-  left: 99px;
-  border-left: 1px solid #AAA;
+  left: 79px;
+  border-left: 1px solid rgba(191, 191, 191, 0.4);
 }
 .components .tabs-right .tab-buttons:after {
   height: 100%;
   bottom: 0px;
-  right: 99px;
-  border-left: 1px solid #AAA;
+  right: 79px;
+  border-left: 1px solid rgba(191, 191, 191, 0.4);
 }
 .components .tabs-right .tabs {
 	display: flex;
@@ -1126,12 +1131,18 @@ footer {
 	font-weight: 700;
 	color: #ff4000;
 	font-size: 16px;
-	width: 100px;
+	width: 80px;
     display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	padding: 10px 5px;
+	padding: 12px 5px;
 	position: relative;
+}
+.components .tabs-left .tab-buttons {
+	width: 30%;
+}
+.components .tabs-right .tab-buttons {
+	width: 30%;
 }
 .components .tabs .tab-buttons .tab-link:hover{
 	background-color: #f2f2f2;
@@ -1140,7 +1151,7 @@ footer {
 	background-color: white;
 	color: #333333;
 	z-index: 2;
-	border: 1px solid #AAA;	
+	border: 1px solid rgba(191, 191, 191, 0.4);	
 }
 .components .tabs-top .tab-buttons .active {
 	border-width: 1px 1px 0px 1px;
@@ -1157,12 +1168,11 @@ footer {
 .components .tabs-top .tabs .tab-buttons .tab-link:not(:first-child) {
   margin-left: -5px;	
 }
-
 .components .tabs .tab-content-left, .components .tabs .tab-content-top, .components .tabs .tab-content-right {
 	line-height: 1.7em;
 	padding: 1px 20px;
 	display: none;
-	border: 1px solid #AAA;
+	border: 1px solid rgba(191, 191, 191, 0.4);
 	animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 /* Go from zero to full opacity */
@@ -1175,7 +1185,7 @@ footer {
 }
 .components .tabs .tab-content-left {
 	border-width: 1px 1px 1px 0px;
-	display: relative;
+	
 }
 .components .tabs .tab-content-right {
 	border-width: 1px 0px 1px 1px;
@@ -1208,6 +1218,16 @@ footer {
 	font-size: 15px;
 	line-height: 1.4em;
 	display: none;
+}
+.components .row:after {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+    border-bottom: 1px solid rgba(172, 172, 172, 0.4);
+	margin-bottom: 20px;
+}
+.components .row:last-child:after {
+	border: none;
 }
 footer .row {
 	margin-top: 17px;
