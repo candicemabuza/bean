@@ -1,157 +1,216 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/template1.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
 <meta charset="utf-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Home</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<meta charset="utf-8">
-	<meta name="author" content="Themba Dlamini">
-	<meta name="description" content="Themba Dlamini">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/61b95464f3.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$(".menu-button").click(function() {
-				$("#link-list").slideToggle("slow");
-			});
-		});
-	</script>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<title>Volos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/show-menu.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-<div class="wrapper"> 
-  <! -- start of hidden nav accordion -->
-  <div class="nav-accordion">
-    <div class="menu-button" onclick="myFunction()">menu<span class="fa fa-bars"></span></div>
-    <ul id="link-list">
-      <li class="accordion"><a href="index.html">home</a></li>
-      <li class="accordion with-panel">features<i class="fa fa-caret-right"></i></li>
-      <ul class="panel">
-        <li class="sub-accordion">typography<i class="fa fa-caret-right"></i></li>
-        <li class="sub-accordion with-panel">components<i class="fa fa-caret-right"></i></li>
-        <ul class="sub-panel">
-          <li><a href="components.html">labels</a></li>
-          <li><a href="progress bars.html">progress bars</a></li>
-          <li><a href="panels.html">panels</a></li>
-          <li><a href="pagination.html">pagination</a></li>
-        </ul>
-        <li class="sub-accordion with-panel">icons<i class="fa fa-caret-right"></i></li>
-        <ul class="sub-panel">
-          <li><a href="icons general.html">icons general</a></li>
-          <li><a href="social icons.html">social icons</a></li>
-          <li><a href="font awsome.html">font awsome</a></li>
-			<li><a href="glyphicons.html">glyphicons</a></li>
-        </ul>
-        <li class="sub-accordion"><a href="tables.html">tables</a></li>
-        <li class="sub-accordion"><a href="testimonials.html">testimonials</a></li>
-        <li class="sub-accordion"><a href="accordions and tabs.html">accordions and tabs</a></li>
-        <li class="sub-accordion"><a href="buttons.html">buttons</a></li>
-        <li class="sub-accordion"><a href="carousels.html">carousels</a></li>
-        <li class="sub-accordion"><a href="grid system.html">grid system</a></li>
-        <li class="sub-accordion"><a href="animate on scroll.html">animate on scroll</a></li>
-      </ul>
-      <li class="accordion with-panel">pages<i class="fa fa-caret-right"></i></li>
-      <ul class="panel">
-        <li class="sub-accordion"><a href="about us.html">about us</a></li>
-        <li class="sub-accordion"><a href="services.html">services</a></li>
-        <li class="sub-accordion"><a href="testimonials.html">F.A.Q.</a></li>
-        <li class="sub-accordion"><a href="about me.html">about me</a></li>
-        <li class="sub-accordion"><a href="full width.html">full width</a></li>
-        <li class="sub-accordion"><a href="left sidebar.html">left sidebar</a></li>
-        <li class="sub-accordion"><a href="right sidebar.html">right sidebar</a></li>
-        <li class="sub-accordion"><a href="login.html">login</a></li>
-        <li class="sub-accordion"><a href="sign up.html">sign up</a></li>
-        <li class="sub-accordion"><a href="404.html">404 error page</a></li>
-      </ul>
-      <li class="accordion with-panel">portfolio<i class="fa fa-caret-right"></i></li>
-      <ul class="panel">
-        <li class="sub-accordion"><a href="2 column.html">2 column</a></li>
-        <li class="sub-accordion"><a href="3 column.html">3 column</a></li>
-        <li class="sub-accordion"><a href="4 column.html">4 column</a></li>
-        <li class="sub-accordion"><a href="6 column.html">6 column</a></li>
-      </ul>
-      <li class="accordion with-panel">blog<i class="fa fa-caret-right"></i></li>
-      <ul class="panel">
-        <li class="sub-accordion"><a href="blog.html">blog</a></li>
-        <li class="sub-accordion"><a href="blog single item.html">blog single item</a></li>
-      </ul>
-      <li class="accordion"><a href="contact.html">contact</a></li>
-    </ul>
+<div id="site-content-wrapper" class="container-fluid">
+  <div class="top-bar"> </div>
+  <div id="toggle-button" onclick="slide_hidden_menu()">
+    <div class="button-line1"></div>
+    <div class="button-line2"></div>
+    <div class="button-line3"></div>
   </div>
-  <! -- end of hidden nav accordion -->
-  
-  <div class="header-bg">
-    <div class="row header">
-      <div class="logo">
-        <h1>themba dlamini</h1>
-        <p>Web Developer Eswatini</p>
+  <div id="pagination">
+    <div class="current-number">01</div>
+    <div class="pagination-bar"></div>
+    <div class="total-number">06</div>
+  </div>
+  <div id="left-content">
+    <!-- hidden menu side bar
+			<div id="hidden-menu-side-bar">
+				<div id="hidden-menu-wrapper">
+					<span><a href="#">home</a></span>
+					<span><a>services</a></span>
+					<span><a>portfolio</a></span>
+					<span><a>resume</a></span>
+					<span><a>skills</a></span>
+					<span><a>contact</a></span>
+				</div>
+			</div> -->
+
+    <!-- Info side bar
+			<div id="info-side-bar">
+				<div id="my-info-wrapper">
+					<div class="my-info">
+						<p class="my-info-title">name</p>
+						<p class="my-info-content">themba dlamini</p>
+					</div>
+					<div class="my-info">
+						<p class="my-info-title">role</p>
+						<p class="my-info-content">developer</p>
+					</div>
+					<div class="my-info">
+						<p class="my-info-title">email</p>
+						<p class="my-info-content">thembadlamini365@gmail.com</p>
+					</div>
+					<div class="my-info">
+						<p class="my-info-title">phone</p>
+						<p class="my-info-content">+268 76425317</p>
+					</div>
+				</div>
+				<div class="signature">
+					<p>themba dlamini</p>
+				</div>
+			</div> -->
+  </div>
+  <!-- Right side content -->
+  <div id="right-content">
+    <div id="home">
+      <div class="home-wrapper">
+        <div class="row is-flex">
+          <!-- Home left -->
+          <div id="home-left" class="col-sm-6">
+            <p class="home-salutation">Hello. My name is</p>
+            <h3>themba dlamini</h3>
+            <p class="info small-text">A full stack all around designer that may or may not include a guide for specific creative potential methods who framing and evaluating moves.</p>
+            <div class="social-links"> <a>linkedin</a> <a>facebook</a> <a>instagram</a> </div>
+          </div>
+          <!-- Home right -->
+          <div id="home-right" class="col-sm-6">
+            <div class="home-image-wrapper"> </div>
+          </div>
+        </div>
       </div>
-      <div class="nav">
-        <ul>
-          <li class="drp-btn link-btn"><a href="index.html"><i class="fa fa-home"></i>home</a> </li>
-          <li class="drp-btn link-btn"><a href="#"><i class="fa fa-gears"></i>features</a>
-            <ul class="dropdown-content">
-              <li><a href="typography.html">typography</a>
-              </li>
-              <li class="sub-drp-btn"><a href="components.html">components<span>&#8250;</span></a>
-                <ul class="sub-dropdown-content">
-                  <li><a href="progress bars.html">progress bars</a></li>
-                  <li><a href="panels.html">panels</a></li>
-                </ul>
-				</li>
-            </ul>
-          </li>
-          <li class="link-btn"><a href="contact.html"><i class="fa fa-comment"></i>contact</a></li>
-        </ul>
+    </div>
+    <div id="services">
+      <div class="services-wrapper">
+        <div class="row">
+          <div id="left-service" class="col-md-6">
+            <div class="row is-flex">
+              <div class="col-sm-6">
+                <div class="box"> <i class="material-icons">adb</i>
+                  <h3 class="title">Design</h3>
+                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box"> <i class="material-icons">adb</i>
+                  <h3 class="title">Design</h3>
+                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                  <p>cfgvjhfghfhghgf</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box"> <i class="material-icons">adb</i>
+                  <h3 class="title">Design</h3>
+                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box"> <i class="material-icons">adb</i>
+                  <h3 class="title">Design</h3>
+                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="description" class="col-md-6">
+            <div class="desc-wrapper">
+              <h3 class="title">Services</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.</p>
+              <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet.</p>
+              <p class="small-text">Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus</p>
+              <button class="button">Download CV</button>
+              <button class="button">Check my portfolio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portfoilio">
+      <div class="filter-buttons">
+        <div id="dropbutton">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="dropdwon-content"> <span class="btn" onclick="filterSelection(event, 'all')">All</span>
+			<span class="btn" onclick="filterSelection(event, 'girls')">Girls</span>
+			<span class="btn" onclick="filterSelection(event, 'cars')">Cars</span>
+			<span class="btn" onclick="filterSelection(event, 'nature')">Nature</span> </div>
+      </div>
+      <div class="row is-flex">
+        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature1.jpg"  alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl1.jpg"  alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature2.jpg" width="100%" alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl2.jpg" width="100%" alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature3.jpg" width="100%" alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 cars"> <img src="img/car2.jpg" width="100%" alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl3.jpg" width="100%" alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 cars"> <img src="img/car1.jpg"  alt="car1"> </div>
+        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature4.jpg" width="100%" alt="car1"> </div>
       </div>
     </div>
   </div>
-  <!-- InstanceBeginEditable name="content" -->
-  <div class="content-area"></div>
-  <!-- InstanceEndEditable -->
-  <footer>
-    <div class="row">
-      <div class="disclaimer col-6 col-s-12">
-        <h3>Disclaimer</h3>
-        <p> All stock images on this template demo are for presentation purposes only, intended to represent a live site and are not included with the template or in any of the Joomla51 club membership plans. <br>
-          <br>
-          Dribbble images are property of their respective owners. All other images are freely available from Unsplash. </p>
-      </div>
-      <div class="image-credits col-3 col-s-6">
-        <h3>Image Credits</h3>
-        <p><a>Olly Freeman</a></p>
-        <p><a>Nikko Picard</a></p>
-        <p><a>Forsurgraphic</a></p>
-        <p><a>Unsplash</a></p>
-        <p><a>coming soon</a></p>
-      </div>
-      <div class="friends col-3 col-s-6">
-        <h3>Friends</h3>
-        <p>coming soon</p>
-        <p>coming soon</p>
-        <p>coming soon</p>
-        <p>coming soon</p>
-        <p>coming soon</p>
+  <div id="resume">
+    <div class="resume-wrapper">
+      <div class="row">
+        <div id="expirience"></div>
+        <div id="cover-letter"></div>
       </div>
     </div>
+  </div>
+  <div id="skills">
     <div class="row">
-      <ul class="sample-links col-8 col-s-12">
-        <li><a href="">Sample Link</a></li>
-        <li><a href="">Sample Link</a></li>
-        <li><a href="">Sample Link</a></li>
-        <li><a href="">Sample Link</a></li>
-      </ul>
-      <div class="copyright col-4 col-s-12">
-        <p>(c) 2014 Your Copyright Info</p>
+      <div class="skills-wrapper">
+        <div id="circular-skills-bars"></div>
+        <div id="rectangular-skills-bars"></div>
       </div>
     </div>
-  </footer>
+  </div>
+  <div id="contact">
+    <div class="contact-wrapper">
+      <div class="row">
+        <div id="contact-info"></div>
+        <div id="contact-form"></div>
+      </div>
+    </div>
+  </div>
 </div>
-<script src="script.js"></script>
+<script>
+		// Show filtered elements
+		function filterSelection(evt, image_type) {
+			var all_buttons = document.getElementsByClassName('btn');
+			var all_images = document.getElementsByClassName('column');
+			var images_of_same_type = document.getElementsByClassName(image_type);
+
+			// Remove active class from all buttons and add it to clicked button
+			for (var i = 0; i < all_buttons.length; i++) {
+				all_buttons[i].classList.remove('active');
+			}
+			// Add active class to clicked button
+			evt.currentTarget.classList.add('active');
+
+			// Hide all images
+			for (var i = 0; i < all_images.length; i++) {
+				all_images[i].classList.add('hide');
+        all_images[i].classList.remove('show');
+			}
+			// If image_type = 'all' remove hide and add show on all images
+			if (image_type == 'all') {
+				for (var i = 0; i < all_images.length; i++) {
+					all_images[i].classList.remove('hide');
+					all_images[i].classList.add('show');
+				}
+			}
+			// Remove hide and add show on images of same type
+			else {
+				for (var j = 0; j < images_of_same_type.length; j++) {
+					images_of_same_type[j].classList.remove('hide');
+					images_of_same_type[j].classList.add('show');
+				}
+			}
+		}
+	</script>
 </body>
-<!-- InstanceEnd --></html>
+</html>
