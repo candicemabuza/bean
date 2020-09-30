@@ -3,13 +3,22 @@
   box-sizing: border-box;
 }
 :root {
-  --darkest-color: #3D550C;
-  --less-dark-color: #59981A;
-  --less-light-color: #81B622;
-  --lightest-color: #ECF87F;
+  --darkest-color: #302729;
+  --less-dark-color: #362A2E;
+  --less-light-color: #F37B83;
+  --lightest-color: #A8858F;
   --white-color: #fff;
   --left-side-width: 60px;
 }
+--dark-primary-color: #1976D2;
+--default-primary-color: #2196F3;
+--light-primary-color: #BBDEFB;
+--text-primary-color: #FFFFFF;
+--accent-color: background: #FF9800;
+--primary-text-color: color: #212121;
+--secondary-text-color: color: #757575;
+--divider-color: border-color: #BDBDBD;
+
 @font-face {
   font-family: Caveat;
   src: url(../font/Caveat-Regular.ttf);
