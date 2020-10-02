@@ -250,6 +250,19 @@
         }
       }
     }
+      var isOpen = false;
+      var humburg = document.getElementById('humburger-button');
+      humburg.addEventListener('click', ()=>{
+        if (!isOpen){
+          humburg.classList.add('open');
+          isOpen = true;
+        }
+        else {
+          humburg.classList.remove('open');
+          isOpen = false;
+        }
+      })
+
   </script>
 </body>
 
