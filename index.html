@@ -1,32 +1,33 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Volos</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="js/show-menu.js"></script>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="utf-8">
+  <title>Volos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/show-menu.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-<div id="site-content-wrapper" class="container-fluid">
-  <div class="top-bar"> </div>
-  <div id="toggle-button" onclick="slide_hidden_menu()">
-    <div class="button-line1"></div>
-    <div class="button-line2"></div>
-    <div class="button-line3"></div>
-  </div>
-  <div id="pagination">
-    <div class="current-number">01</div>
-    <div class="pagination-bar"></div>
-    <div class="total-number">06</div>
-  </div>
-  <div id="left-content">
-    <!-- hidden menu side bar
+  <div id="site-content-wrapper" class="container-fluid">
+    <div class="top-bar"> </div>
+    <div id="toggle-button" onclick="slide_hidden_menu()">
+      <div class="button-line1"></div>
+      <div class="button-line2"></div>
+      <div class="button-line3"></div>
+    </div>
+    <div id="pagination">
+      <div class="current-number">01</div>
+      <div class="pagination-bar"></div>
+      <div class="total-number">06</div>
+    </div>
+    <div id="left-content">
+      <!-- hidden menu side bar
 			<div id="hidden-menu-side-bar">
 				<div id="hidden-menu-wrapper">
 					<span><a href="#">home</a></span>
@@ -38,7 +39,7 @@
 				</div>
 			</div> -->
 
-    <!-- Info side bar
+      <!-- Info side bar
 			<div id="info-side-bar">
 				<div id="my-info-wrapper">
 					<div class="my-info">
@@ -62,155 +63,192 @@
 					<p>themba dlamini</p>
 				</div>
 			</div> -->
-  </div>
-  <!-- Right side content -->
-  <div id="right-content">
-    <div id="home">
-      <div class="home-wrapper">
+    </div>
+    <!-- Right side content -->
+    <div id="right-content">
+      <div id="home">
+        <div class="home-wrapper">
+          <div class="row is-flex">
+            <!-- Home left -->
+            <div id="home-left" class="col-sm-6">
+              <p class="home-salutation">Hello. My name is</p>
+              <h3>themba dlamini</h3>
+              <p class="info small-text">A full stack all around designer that may or may not include a guide for specific creative potential methods who framing and evaluating moves.</p>
+              <div class="social-links"> <a>linkedin</a> <a>facebook</a> <a>instagram</a> </div>
+            </div>
+            <!-- Home right -->
+            <div id="home-right" class="col-sm-6">
+              <div class="home-image-wrapper tile"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="services">
+        <div class="services-wrapper">
+          <div class="row">
+            <div id="left-service" class="col-md-6">
+              <div class="row is-flex">
+                <div class="col-sm-6">
+                  <div class="box"> <i class="material-icons">adb</i>
+                    <h3 class="title">Design</h3>
+                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="box"> <i class="material-icons">adb</i>
+                    <h3 class="title">Design</h3>
+                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                    <p>cfgvjhfghfhghgf</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="box"> <i class="material-icons">adb</i>
+                    <h3 class="title">Design</h3>
+                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="box"> <i class="material-icons">adb</i>
+                    <h3 class="title">Design</h3>
+                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="description" class="col-md-6">
+              <div class="desc-wrapper">
+                <h3 class="title">Services</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.</p>
+                <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet.</p>
+                <p class="small-text">Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
+                  phasellus. Volutpat faucibus</p>
+                <button class="button">Download CV</button>
+                <button class="button">Check my portfolio</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="portfoilio">
+        <div class="filter-buttons">
+          <div id="humburger-button">
+            <div class="bar"></div>
+          </div>
+          <div class="dropdown-content"> <span class="filter-btn" onclick="filterSelection(event, 'all')">All</span>
+            <span class="filter-btn" onclick="filterSelection(event, 'girls')">Girls</span>
+            <span class="filter-btn" onclick="filterSelection(event, 'cars')">Cars</span>
+            <span class="filter-btn" onclick="filterSelection(event, 'nature')">Nature</span>
+          </div>
+        </div>
         <div class="row is-flex">
-          <!-- Home left -->
-          <div id="home-left" class="col-sm-6">
-            <p class="home-salutation">Hello. My name is</p>
-            <h3>themba dlamini</h3>
-            <p class="info small-text">A full stack all around designer that may or may not include a guide for specific creative potential methods who framing and evaluating moves.</p>
-            <div class="social-links"> <a>linkedin</a> <a>facebook</a> <a>instagram</a> </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 nature">
+            <div class="tile" style="background-image: url(img/nature1.jpg)">
+
+            </div>
           </div>
-          <!-- Home right -->
-          <div id="home-right" class="col-sm-6">
-            <div class="home-image-wrapper"> </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 girls">
+            <div class="tile" style="background-image: url(img/girl1.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 nature">
+            <div class="tile" style="background-image: url(img/nature2.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 girls">
+            <div class="tile" style="background-image: url(img/girl2.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 nature">
+            <div class="tile" style="background-image: url(img/nature3.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 cars">
+            <div class="tile" style="background-image: url(img/car2.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 girls">
+            <div class="tile" style="background-image: url(img/girl3.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 cars">
+            <div class="tile" style="background-image: url(img/car1.jpg)">
+
+            </div>
+          </div>
+          <div class="column col-xs-12 col-sm-6 col-md-4 nature">
+            <div class="tile" style="background-image: url(img/nature4.jpg)">
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="services">
-      <div class="services-wrapper">
+    <div id="resume">
+      <div class="resume-wrapper">
         <div class="row">
-          <div id="left-service" class="col-md-6">
-            <div class="row is-flex">
-              <div class="col-sm-6">
-                <div class="box"> <i class="material-icons">adb</i>
-                  <h3 class="title">Design</h3>
-                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="box"> <i class="material-icons">adb</i>
-                  <h3 class="title">Design</h3>
-                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
-                  <p>cfgvjhfghfhghgf</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="box"> <i class="material-icons">adb</i>
-                  <h3 class="title">Design</h3>
-                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="box"> <i class="material-icons">adb</i>
-                  <h3 class="title">Design</h3>
-                  <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="description" class="col-md-6">
-            <div class="desc-wrapper">
-              <h3 class="title">Services</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.</p>
-              <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet.</p>
-              <p class="small-text">Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus</p>
-              <button class="button">Download CV</button>
-              <button class="button">Check my portfolio</button>
-            </div>
-          </div>
+          <div id="expirience"></div>
+          <div id="cover-letter"></div>
         </div>
       </div>
     </div>
-    <div id="portfoilio">
-      <div class="filter-buttons">
-        <div id="dropbutton">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+    <div id="skills">
+      <div class="row">
+        <div class="skills-wrapper">
+          <div id="circular-skills-bars"></div>
+          <div id="rectangular-skills-bars"></div>
         </div>
-        <div class="dropdwon-content"> <span class="btn" onclick="filterSelection(event, 'all')">All</span>
-			<span class="btn" onclick="filterSelection(event, 'girls')">Girls</span>
-			<span class="btn" onclick="filterSelection(event, 'cars')">Cars</span>
-			<span class="btn" onclick="filterSelection(event, 'nature')">Nature</span> </div>
       </div>
-      <div class="row is-flex">
-        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature1.jpg"  alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl1.jpg"  alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature2.jpg" width="100%" alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl2.jpg" width="100%" alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature3.jpg" width="100%" alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 cars"> <img src="img/car2.jpg" width="100%" alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 girls"> <img src="img/girl3.jpg" width="100%" alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 cars"> <img src="img/car1.jpg"  alt="car1"> </div>
-        <div class="column col-xs-12 col-sm-6 col-md-4 nature"> <img src="img/nature4.jpg" width="100%" alt="car1"> </div>
+    </div>
+    <div id="contact">
+      <div class="contact-wrapper">
+        <div class="row">
+          <div id="contact-info"></div>
+          <div id="contact-form"></div>
+        </div>
       </div>
     </div>
   </div>
-  <div id="resume">
-    <div class="resume-wrapper">
-      <div class="row">
-        <div id="expirience"></div>
-        <div id="cover-letter"></div>
-      </div>
-    </div>
-  </div>
-  <div id="skills">
-    <div class="row">
-      <div class="skills-wrapper">
-        <div id="circular-skills-bars"></div>
-        <div id="rectangular-skills-bars"></div>
-      </div>
-    </div>
-  </div>
-  <div id="contact">
-    <div class="contact-wrapper">
-      <div class="row">
-        <div id="contact-info"></div>
-        <div id="contact-form"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-		// Show filtered elements
-		function filterSelection(evt, image_type) {
-			var all_buttons = document.getElementsByClassName('btn');
-			var all_images = document.getElementsByClassName('column');
-			var images_of_same_type = document.getElementsByClassName(image_type);
+  <script>
+    // Show filtered elements
+    function filterSelection(evt, image_type) {
+      var all_buttons = document.getElementsByClassName('filter-btn');
+      var all_images = document.getElementsByClassName('column');
+      var images_of_same_type = document.getElementsByClassName(image_type);
 
-			// Remove active class from all buttons and add it to clicked button
-			for (var i = 0; i < all_buttons.length; i++) {
-				all_buttons[i].classList.remove('active');
-			}
-			// Add active class to clicked button
-			evt.currentTarget.classList.add('active');
+      // Remove active class from all buttons and add it to clicked button
+      for (var i = 0; i < all_buttons.length; i++) {
+        all_buttons[i].classList.remove('active');
+      }
+      // Add active class to clicked button
+      evt.currentTarget.classList.add('active');
 
-			// Hide all images
-			for (var i = 0; i < all_images.length; i++) {
-				all_images[i].classList.add('hide');
+      // Hide all images
+      for (var i = 0; i < all_images.length; i++) {
+        all_images[i].classList.add('hide');
         all_images[i].classList.remove('show');
-			}
-			// If image_type = 'all' remove hide and add show on all images
-			if (image_type == 'all') {
-				for (var i = 0; i < all_images.length; i++) {
-					all_images[i].classList.remove('hide');
-					all_images[i].classList.add('show');
-				}
-			}
-			// Remove hide and add show on images of same type
-			else {
-				for (var j = 0; j < images_of_same_type.length; j++) {
-					images_of_same_type[j].classList.remove('hide');
-					images_of_same_type[j].classList.add('show');
-				}
-			}
-		}
-	</script>
+      }
+      // If image_type = 'all' remove hide and add show on all images
+      if (image_type == 'all') {
+        for (var i = 0; i < all_images.length; i++) {
+          all_images[i].classList.remove('hide');
+          all_images[i].classList.add('show');
+        }
+      }
+      // Remove hide and add show on images of same type
+      else {
+        for (var j = 0; j < images_of_same_type.length; j++) {
+          images_of_same_type[j].classList.remove('hide');
+          images_of_same_type[j].classList.add('show');
+        }
+      }
+    }
+  </script>
 </body>
+
 </html>
