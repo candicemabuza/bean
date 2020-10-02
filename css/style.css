@@ -37,6 +37,7 @@ body {
   padding: 0;
   margin: 0;
   margin-top: 40px;
+  overflow-x: hidden;
 }
 .title {
   color: var(--less-light-color);
@@ -265,11 +266,6 @@ body {
   padding: 20px;
   position: relative;
 }
-#right-content #portfoilio .filter-buttons #humburger-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
 #right-content #portfoilio .filter-buttons {
   position: absolute;
   right: 20px;
@@ -277,6 +273,36 @@ body {
   z-index: 1;
 
   line-height: 22px;
+}
+#right-content #portfoilio .filter-buttons #humburger-button {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  height: 20px;
+  width: 30px;
+  transition: all 1s ease;
+}
+#right-content #portfoilio .filter-buttons #humburger-button .bar1 {
+  background-color: var(--less-light-color);
+  height: 2px;
+  width: 20px;
+  transform: translateX(10px);
+  transition: all 1s ease;
+}
+#humburger-button .bar2, #humburger-button .bar3 {
+  background-color: var(--less-light-color);
+  height: 2px;
+  position: absolute;
+  transform: translateY(7px);
+}
+#humburger-button .bar2 {
+  width: 10px;
+  height: 4px;
+}
+#humburger-button .bar3 {
+  width: 15px;
+  transform: translate(15px, 8px);
+  transition: all 1s ease;
 }
 #right-content #portfoilio .filter-buttons .dropdown-content {
   width: 130px;
