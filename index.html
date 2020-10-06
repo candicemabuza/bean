@@ -13,56 +13,59 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body>
+<body onscroll="myFunction()">
   <div id="site-content-wrapper" class="container-fluid">
     <div class="top-bar"> </div>
-    <div id="toggle-button" onclick="slide_hidden_menu()">
+    <div id="toggle-button">
       <div class="button-line1"></div>
       <div class="button-line2"></div>
       <div class="button-line3"></div>
     </div>
     <div id="pagination">
-      <div class="current-number">01</div>
+      <div id="current-number">01</div>
       <div class="pagination-bar"></div>
       <div class="total-number">06</div>
     </div>
-    <div id="left-content">
-      <!-- hidden menu side bar
-			<div id="hidden-menu-side-bar">
-				<div id="hidden-menu-wrapper">
-					<span><a href="#">home</a></span>
-					<span><a>services</a></span>
-					<span><a>portfolio</a></span>
-					<span><a>resume</a></span>
-					<span><a>skills</a></span>
-					<span><a>contact</a></span>
-				</div>
-			</div> -->
 
-      <!-- Info side bar
-			<div id="info-side-bar">
-				<div id="my-info-wrapper">
-					<div class="my-info">
-						<p class="my-info-title">name</p>
-						<p class="my-info-content">themba dlamini</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">role</p>
-						<p class="my-info-content">developer</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">email</p>
-						<p class="my-info-content">thembadlamini365@gmail.com</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">phone</p>
-						<p class="my-info-content">+268 76425317</p>
-					</div>
-				</div>
-				<div class="signature">
-					<p>themba dlamini</p>
-				</div>
-			</div> -->
+    <!-- hidden menu side bar -->
+    <div id="hidden-menu-side-bar">
+      <div id="hidden-menu-wrapper">
+        <span><a href="#">home</a></span>
+        <span><a>services</a></span>
+        <span><a>portfolio</a></span>
+        <span><a>resume</a></span>
+        <span><a>skills</a></span>
+        <span><a>contact</a></span>
+      </div>
+    </div>
+
+    <div id="left-content">
+
+
+      <!-- Info side bar -->
+      <div id="info-side-bar">
+        <div id="my-info-wrapper">
+          <div class="my-info">
+            <p class="my-info-title">name</p>
+            <p class="my-info-content">themba dlamini</p>
+          </div>
+          <div class="my-info">
+            <p class="my-info-title">role</p>
+            <p class="my-info-content">developer</p>
+          </div>
+          <div class="my-info">
+            <p class="my-info-title">email</p>
+            <p class="my-info-content">thembadlamini365@gmail.com</p>
+          </div>
+          <div class="my-info">
+            <p class="my-info-title">phone</p>
+            <p class="my-info-content">+268 76425317</p>
+          </div>
+        </div>
+        <div class="signature">
+          <p>themba dlamini</p>
+        </div>
+      </div>
     </div>
     <!-- Right side content -->
     <div id="right-content">
@@ -96,21 +99,20 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="box"> <i class="material-icons">adb</i>
-                    <h3 class="title">Design</h3>
-                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
-                    <p>cfgvjhfghfhghgf</p>
+                    <h3 class="title">Develop</h3>
+                    <p>Tellus pharetra erat tristique erat donec dignissim etiam sed malesik enim sodales lorem ipsum</p>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="box"> <i class="material-icons">adb</i>
-                    <h3 class="title">Design</h3>
-                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                    <h3 class="title">Write</h3>
+                    <p>Vestibulum consequat, dignissim tellus sollicitudin vulputate elit aliquet ullamcorper feugiat nisi</p>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="box"> <i class="material-icons">adb</i>
-                    <h3 class="title">Design</h3>
-                    <p>A full stack allaround designer that may or may not include a guide for specific creative people</p>
+                    <h3 class="title">Promote</h3>
+                    <p>Quam facilisi nunc faucibus at porttitor vestibulum consequat dignissim tellus sollicitudin</p>
                   </div>
                 </div>
               </div>
@@ -129,6 +131,7 @@
           </div>
         </div>
       </div>
+      <!-- Start of portfolio -->
       <div id="portfoilio">
         <div class="filter-buttons">
           <div id="humburger-button">
@@ -145,76 +148,279 @@
         <div class="row is-flex">
           <div class="column col-xs-12 col-sm-6 col-md-4 nature">
             <div class="tile" style="background-image: url(img/nature1.jpg)">
-
+              <div class="overlay">
+                <h3>Nature</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 girls">
             <div class="tile" style="background-image: url(img/girl1.jpg)">
-
+              <div class="overlay">
+                <h3>Girl</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 nature">
             <div class="tile" style="background-image: url(img/nature2.jpg)">
-
+              <div class="overlay">
+                <h3>Nature</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 girls">
             <div class="tile" style="background-image: url(img/girl2.jpg)">
-
+              <div class="overlay">
+                <h3>Girl</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 nature">
             <div class="tile" style="background-image: url(img/nature3.jpg)">
-
+              <div class="overlay">
+                <h3>Nature</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 cars">
             <div class="tile" style="background-image: url(img/car2.jpg)">
-
+              <div class="overlay">
+                <h3>Car</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 girls">
             <div class="tile" style="background-image: url(img/girl3.jpg)">
-
+              <div class="overlay">
+                <h3>Girl</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 cars">
             <div class="tile" style="background-image: url(img/car1.jpg)">
-
+              <div class="overlay">
+                <h3>Car</h3>
+              </div>
             </div>
           </div>
           <div class="column col-xs-12 col-sm-6 col-md-4 nature">
             <div class="tile" style="background-image: url(img/nature4.jpg)">
+              <div class="overlay">
+                <h3>Nature</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End portfolio -->
 
+      <div id="resume">
+        <div class="resume-wrapper">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="timeline-holder">
+                <h3 class="title">Experience</h3>
+                <div class="timeline-event">
+                  <div class="event-year">
+                    <p>
+                      2015
+                    </p>
+                  </div>
+                  <div class="event-description">
+                    <div class="outer-circle">
+                      <div class="inner-circle">
+                      </div>
+                    </div>
+                    <p>
+                      <span>2015 - 2017 </span>Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat. Nunc amet
+                      tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-event">
+                  <div class="event-year">
+                    <p>
+                      2017
+                    </p>
+                  </div>
+                  <div class="event-description">
+                    <div class="outer-circle">
+                      <div class="inner-circle">
+                      </div>
+                    </div>
+                    <p>
+                      <span>2017 - 2018 </span>Rings of Uranus the only home we’ve ever known. Permanence of the stars Tunguska event drake equation encyclopaedia galactica great turbulent quisque risus arcu, ullamcorper id nunc quis, euismod
+                      tincidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-event">
+                  <div class="event-year">
+                    <p>
+                      2018
+                    </p>
+                  </div>
+                  <div class="event-description">
+                    <div class="outer-circle">
+                      <div class="inner-circle">
+                      </div>
+                    </div>
+                    <p>
+                      <span>2018 - 2020 </span>Eget enim aliquam euismod mauris in vitae viverra blandit lectus faucibus diam consequat maecenas turpis metus sit diam purus leo in varius. Nunc amet tristique volutpat adipiscing vulputate phasellus
+                      eget enim.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-event">
+                  <div class="event-year">
+                    <p>
+                      2020
+                    </p>
+                  </div>
+                  <div class="event-description">
+                    <div class="outer-circle">
+                      <div class="inner-circle">
+                      </div>
+                    </div>
+                    <p>
+                      <span>2020 - 2022 </span>Tendrils of gossamer clouds, the ash of stellar alchemy tendrils of true gossamer clouds vangelis the sky calls to us rich in heavy atoms something. Turpis metus sit diam purus leo in varius ac quam.
+                      Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="cover-letter-holder">
+                <h3 class="title">Cover letter</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.
+                </p>
+                <p class="small-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet. Mauris egestas nulla arcu, ut vestibulum diam vulputate non. Ut massa mauris,
+                  condimentum ut tincidunt eu, mattis euismod dolor.
+                </p>
+                <p class="small-text">
+                  Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat
+                  faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor. Praesent vel commodo dolor, at vehicula turpis.
+                </p>
+                <p class="small-text">
+                  Phasellus non dui sed eros scelerisque gravida eu lobortis magna. Sed vulputate, lacus blandit posuere aliquet, enim purus dignissim nunc, at efficitur nulla lacus id quam. Morbi feugiat neque a quam viverra auctor.
+                </p>
+                <p class="signature">
+                  Themba Dlamini
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="resume">
-      <div class="resume-wrapper">
-        <div class="row">
-          <div id="expirience"></div>
-          <div id="cover-letter"></div>
-        </div>
-      </div>
-    </div>
-    <div id="skills">
-      <div class="row">
+      <div id="skills">
+        <h3 class="title">Skills</h3>
         <div class="skills-wrapper">
-          <div id="circular-skills-bars"></div>
-          <div id="rectangular-skills-bars"></div>
+          <div id="circular-skills-bars">
+          </div>
+          <div id="rectangular-skills-bars">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="wrapper">
+                  <div class="progress-bar creativity">
+                    <div class="back">
+                      <div class="front">
+                      </div>
+                    </div>
+
+                  </div>
+                  <span class="skill-rating">75%</span>
+                  <h3 class="skill-name">Creativity</h3>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="wrapper">
+                  <div class="progress-bar cooking">
+                    <div class="back">
+                      <div class="front">
+                      </div>
+                    </div>
+
+                  </div>
+                  <span class="skill-rating">67%</span>
+                  <h3 class="skill-name">cooking</h3>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="wrapper">
+                  <div class="progress-bar php">
+                    <div class="back">
+                      <div class="front">
+                      </div>
+                    </div>
+
+                  </div>
+                  <span class="skill-rating">70%</span>
+                  <h3 class="skill-name">Php</h3>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="wrapper">
+                  <div class="progress-bar photoshop">
+                    <div class="back">
+                      <div class="front">
+                      </div>
+                    </div>
+
+                  </div>
+                  <span class="skill-rating">53%</span>
+                  <h3 class="skill-name">Photoshop</h3>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <div id="contact">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <h3 class="title">Get in touch</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.
+                  </p>
+                  <p class="small-text">
+                    Magni dolores eos qui sed quia consequuntur ratione voluptatem sequi nesciunt permano Nence of the stars from which we spring muse about as a patch of light billions upon billions.
+                  </p>
+                  <p class="small-text">
+                    Energy hidden in matter a mote of lorem ipsum dust suspended in a sunbeam billions upon ratione voluptatem sequi nesciunt permano lorem ipsum.
+                  </p>
+                  <p>
+                    <span>ADDRESS:</span> Some Street 987, Eswatini
+                  </p>
+                  <p>
+                    <span>EMAIL:</span>  company@youremail.com
+                  </p>
+                  <p>
+                    <span>WEBSITE:</span> www.yourwebsite.com
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="contact-form">
+                  <form>
+                    <input type="text" placeholder="Email"/>
+                      <input type="text" placeholder="Subject"/>
+                      <textarea placeholder="Message" rows="5"></textarea>
+                      <button type="button" value="Send">Send</button>
+                  </form>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-    <div id="contact">
-      <div class="contact-wrapper">
-        <div class="row">
-          <div id="contact-info"></div>
-          <div id="contact-form"></div>
-        </div>
-      </div>
-    </div>
+
+
+    </div> <!-- End of right side content -->
+
   </div>
   <script>
     // Show filtered elements
@@ -222,7 +428,6 @@
       var all_buttons = document.getElementsByClassName('filter-btn');
       var all_images = document.getElementsByClassName('column');
       var images_of_same_type = document.getElementsByClassName(image_type);
-
       // Remove active class from all buttons and add it to clicked button
       for (var i = 0; i < all_buttons.length; i++) {
         all_buttons[i].classList.remove('active');
@@ -249,21 +454,38 @@
           images_of_same_type[j].classList.add('show');
         }
       }
-    }
-      var isOpen = false;
-      var humburg = document.getElementById('humburger-button');
-      humburg.addEventListener('click', ()=>{
-        if (!isOpen){
-          humburg.classList.add('open');
-          isOpen = true;
-        }
-        else {
-          humburg.classList.remove('open');
-          isOpen = false;
-        }
-      })
+    } //End FilterSelection
 
+    //Open and close dropdown content in portfolio section
+    var isOpen = false;
+    var humburg = document.getElementById('humburger-button');
+    humburg.addEventListener('click', () => {
+      if (!isOpen) {
+        humburg.classList.add('open');
+        isOpen = true;
+      } else {
+        humburg.classList.remove('open');
+        isOpen = false;
+      }
+    }) //End
+
+    //Slide in and out for hidden menu
+    var isMenuOpen = false;
+    var toggleMenuButton = document.getElementById('toggle-button');
+    var hiddenMenu = document.getElementById('hidden-menu-side-bar');
+    toggleMenuButton.addEventListener('click', () => {
+      if (!isMenuOpen) {
+        hiddenMenu.classList.add('open');
+        toggleMenuButton.classList.add('open');
+        isMenuOpen = true;
+      } else {
+        hiddenMenu.classList.remove('open');
+        toggleMenuButton.classList.remove('open');
+        isMenuOpen = false;
+      }
+    }) //End
   </script>
+  <script src="js/pagination.js"></script>
 </body>
 
 </html>

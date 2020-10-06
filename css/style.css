@@ -7,8 +7,10 @@
   --less-dark-color: #362A2E;
   --less-light-color: #F37B83;
   --lightest-color: #A8858F;
-  --white-color: #fff;
-  --left-side-width: 60px;
+  --white-color: #f0f0f0;
+  --progress-backround: #554247;
+  --left-side-width: 90px;
+  --left-padding: 30px;
 }
 --dark-primary-color: #1976D2;
 --default-primary-color: #2196F3;
@@ -57,31 +59,34 @@ body {
   -webkit-transition: display 0.5s;
   transition: display 0.5s;
 }
-/* Hidden menu bar set to display none
-#left-content #hidden-menu-side-bar {
+/* Hidden menu bar set to display none */
+#hidden-menu-side-bar {
   background-color: var(--less-light-color);
   padding: 40px;
   padding-top: 200px;
   position: fixed;
   height: 100%;
-  width: var(--left-side-width);
-  left: calc(-1 * var(--left-side-width));
+  width: 220px;
   z-index: 1;
+  transform: translateX(-220px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-#left-content #hidden-menu-side-bar span {
+#hidden-menu-side-bar.open {
+  transform: translateX(0px);
+}
+#hidden-menu-side-bar span {
   display: block;
   margin-bottom: 20px;
 }
-#left-content #hidden-menu-side-bar span a {
+#hidden-menu-side-bar span a {
   text-decoration: none;
   cursor: pointer;
   color: var(--white-color);
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 700;
-} */
+}
 /* Tpo bar*/
 .top-bar {
   position: fixed;
@@ -114,6 +119,26 @@ body {
 #toggle-button .button-line2 {
   width: 30%;
 }
+#toggle-button:hover .button-line1 {
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+#toggle-button:hover .button-line2 {
+  transform: translateX(230%);
+  transition: 0.5s;
+}
+#toggle-button.open .button-line1{
+  width: 100%;
+  transform: rotate(45deg) translateX(3%) translateY(12px);
+}
+#toggle-button.open .button-line2{
+  opacity: 0;
+  transform: translateX(0%);
+}
+#toggle-button.open .button-line3 {
+  transition: 0.3s;
+  transform:  rotate(-45deg) translateY(-11px);
+}
 #pagination {
   position: fixed;
   right: 20px;
@@ -134,9 +159,14 @@ body {
 #pagination div.total-number {
   color: var(--white-color);
 }
-/*
+#right-content {
+  position: absolute;
+  z-index: -1;
+  width: 97%;
+  transition: 0.5s;
+}
 #left-content #info-side-bar #my-info-wrapper {
-	padding: 240px 5px 50px 40px;
+	padding: 240px 5px 50px 20px;
 }
 
 #left-content #info-side-bar {
@@ -158,11 +188,11 @@ body {
 	font-size: 12px;
 }
 
-.signature p {
+.signature p{
 	font-family: Caveat;
-	padding-left: 40px;
+	padding-left: 20px;
 	font-size: 25px;
-} */
+}
 #right-content #home-left {
   background-color: var(--white-color);
   padding: 40px;
@@ -185,7 +215,7 @@ body {
   margin-bottom: 50px;
 }
 #right-content #home-left .social-links a {
-  font-size: 11px;
+  font-size: 9px;
   color: var(--less-dark-color);
   margin-top: 40px;
   line-height: 1.4em;
@@ -196,7 +226,7 @@ body {
   text-decoration: none;
 }
 #right-content #home-left .social-links a:not(:first-child) {
-  margin-left: 30px;
+  margin-left: 15px;
 }
 #right-content #home-right {
   overflow: hidden;
@@ -213,7 +243,9 @@ body {
   padding-top: 66.7%;
 }
 #right-content #services .services-wrapper {
-  padding: 60px 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: var(--left-padding);
 }
 #right-content #services .box {
   padding: 25px;
@@ -226,7 +258,7 @@ body {
   color: var(--lightest-color);
 }
 #right-content #services .box p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5em;
   color: var(--lightest-color);
 }
@@ -234,8 +266,9 @@ body {
   color: var(--lightest-color);
 }
 .small-text {
-  font-size: 13px;
-  line-height: 1.6em;
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-bottom: 30px;
 }
 #right-content #services .desc-wrapper p.small-text {
   line-height: 1.8em;
@@ -246,7 +279,7 @@ body {
   cursor: pointer;
   outline: none;
   border-radius: 60px;
-  padding: 5px 30px;
+  padding: 5px 20px;
   margin-top: 50px;
   font-size: 12px;
   color: var(--white-color);
@@ -263,13 +296,13 @@ body {
   overflow: hidden;
 }
 #right-content #portfoilio {
-  padding: 20px;
+  padding-left: var(--left-padding);
   position: relative;
 }
 #right-content #portfoilio .filter-buttons {
   position: absolute;
-  right: 20px;
-  top: 0;
+  right: 0px;
+  top: -10px;
   z-index: 1;
   cursor: pointer;
   line-height: 22px;
@@ -320,7 +353,7 @@ body {
 #right-content #portfoilio .filter-buttons .dropdown-content {
   width: 130px;
   background-color: var(--less-dark-color);
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 14px;
   display: none;
 }
@@ -339,7 +372,30 @@ body {
   background-size: cover;
   padding: 50%;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
 }
+#right-content #portfoilio .column .tile .overlay {
+  position: absolute;
+  background-color: var(--less-light-color);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  color: var(--white-color);
+  opacity: 0.9;
+  transition: 0.5s;
+}
+#right-content #portfoilio .column .tile .overlay h3{
+  margin: 80% 20px;
+  font-weight: 700;
+}
+#right-content #portfoilio .column .tile:hover .overlay {
+  transform: translateX(0%);
+  transition: 0.5s;
+}
+
 #right-content #portfoilio .active {
 
 }
@@ -365,9 +421,172 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+#resume {
+  padding-left: var(--left-padding);
+}
+#resume .timeline-holder {
+  margin-bottom: 60px;
+}
+#resume .timeline-event:hover .event-year {
+  transform: translateX(-5px);
+  transition: 0.5s ease;
+}
+#resume .timeline-event .event-description p {
+  line-height: 1.6em;
+}
+#resume .timeline-event:hover .event-description p {
+  color: var(--white-color);
+  transition: 0.5s ease;
+}
+#resume .timeline-event:hover .event-description .inner-circle {
+  visibility: visible;
+  transition: 5s ease;
+}
+#resume .timeline-event {
+  display: flex;
+  flex-direction: row;
+}
+#resume .timeline-event:first-of-type {
+  margin-top: 40px;
+}
+#resume .timeline-event .event-year {
+  padding-right: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--less-light-color);
+}
+#resume .timeline-event span {
+  font-weight: 700;
+}
+#resume .timeline-event .event-description {
+  padding-left: 90px;
+  padding-bottom: 20px;
+  position: relative;
+}
+#resume .timeline-event .event-description::before {
+  content: "";
+  background-color: var(--less-light-color);
+  position: absolute;
+  width: 2px;
+  bottom: 5px;
+  top: 35px;
+  left: 30px;
+}
+#resume .timeline-event .event-description .outer-circle {
+  border: 3px solid var(--less-light-color);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  top: 0;
+  left: 16px;
+}
+#resume .timeline-event .event-description .inner-circle {
+  background-color: var(--less-light-color);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: auto;
+  visibility: hidden;
+}
+#resume .cover-letter-holder p:first-of-type, #contact p:first-of-type {
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+#resume .signature {
+	font-family: Caveat;
+	font-size: 25px;
+}
+#skills {
+  padding-left: var(--left-padding);
+}
+#skills #rectangular-skills-bars .wrapper {
+  padding: 15px 1px;
+}
+#skills #rectangular-skills-bars .progress-bar {
+
+  width: 80%;
+}
+#skills #rectangular-skills-bars .back {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: var(--progress-backround);
+}
+#skills #rectangular-skills-bars .front {
+  position: absolute;
+  height: 20px;
+  margin-top: -5px;
+  background-color: var(--less-light-color);
+}
+#skills #rectangular-skills-bars .creativity .front {
+  width: 75%;
+}
+#skills #rectangular-skills-bars .cooking .front {
+  width: 67%;
+}
+#skills #rectangular-skills-bars .php .front {
+  width: 70%;
+}
+#skills #rectangular-skills-bars .photoshop .front {
+  width: 53%;
+}
+#skills #rectangular-skills-bars .skill-rating {
+  display: block;
+position: relative;
+top: -10px;
+left: 10px;
+  font-weight: 700;
+  font-size: 27px;
+}
+#skills #rectangular-skills-bars .skill-name {
+  margin-top: -7px;
+}
+#contact {
+  padding-left: var(--left-padding);
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+#contact .contact-info span {
+  color: rbga(48, 39, 42, 1);
+  font-weight: 700;
+}
+#contact form {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--less-light-color);
+}
+#contact form * {
+  width: 80%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  margin-bottom: 25px;
+  border-bottom: 2px solid white;
+}
+#contact form ::placeholder {
+  color: white;
+}
+#contact form button {
+  border: 2px solid white;
+  margin-top: 20px;
+  padding: 5px;
+}
 @media only screen and (min-width: 768px) {
   .top-bar {
     display: none;
+  }
+  #right-content #home-left .social-links a {
+    font-size: 11px;
+  }
+  #right-content #home-left .social-links a:not(:first-child) {
+    margin-left: 30px;
   }
   #site-content-wrapper {
     margin-top: 0;
@@ -376,18 +595,17 @@ body {
   #left-content {
     display: block;
   }
-  #right-content {
-    position: absolute;
-    left: var(--left-side-width);
-    z-index: -1;
-    width: 100%;
-  }
+
   #pagination {
     display: none;
   }
   #toggle-button {
-    left: 10px;
+    left: 30px;
     top: 25px;
+    z-index: 2;
+  }
+  #right-content {
+    left: var(--left-side-width);
   }
   #right-content #home-right {
     display: block;
@@ -411,10 +629,39 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  #right-content #portfoilio {
+  #right-content #portfoilio, #resume, #skills, #contact {
     padding-right: 80px;
   }
   #right-content #portfoilio .filter-buttons {
     right: 80px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #skills {
+    padding-right: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #left-content #info-side-bar {
+  	display: block;
+  }
+  #left-content {
+    width: 220px;
+    transition: 0.5s;
+  }
+  #right-content {
+    left: 220px;
+    transition: 0.5s;
+  }
+  #right-content #portfoilio, #skills, #resume, #right-content #services .services-wrapper, #contact {
+    padding-right: 200px;
+  }
+  #right-content #portfoilio .filter-buttons {
+    right: 200px;
+  }
+  #pagination {
+    display: block;
+    left: 20px;
+    top: 130px;
   }
 }
