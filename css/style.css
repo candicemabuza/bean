@@ -12,6 +12,7 @@
 	--progress-backround: #554247;
 	--left-side-width: 90px;
 	--left-padding: 15px;
+	--circle-circumference: calc(130*3.14);
 }
 
 @font-face {
@@ -61,7 +62,7 @@ body {
 #hidden-menu-side-bar {
 	background-color: var(--less-light-color);
 	padding: 40px;
-	padding-top: 200px;
+	padding-top: 160px;
 	position: fixed;
 	height: 100%;
 	width: 220px;
@@ -432,7 +433,7 @@ body {
 #right-content #portfoilio .dropdown-content .filter-btn {
 	display: block;
 	text-align: left;
-	padding: 5px;
+	padding: 6px;
 	letter-spacing: 0.1em;
 	color: var(--white-color);
 	cursor: pointer;
@@ -479,11 +480,31 @@ body {
 #right-content #portfoilio .active {}
 
 #right-content #portfoilio .show {
-	display: block;
+	animation: smooth-show 1s ease;
 }
-
+@keyframes smooth-show {
+  0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
 #right-content #portfoilio .hide {
-	display: none;
+
+	animation: smooth-hide 1s ease;
+}
+@keyframes smooth-hide {
+  0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
 }
 
 #portfoilio .row.is-flex {
@@ -612,12 +633,126 @@ body {
 	padding-left: var(--left-padding);
 }
 
+#skills .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-line-pack: distribute;
+	align-content: space-around;
+	padding: 10px 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+#skills .container .card {
+	position: relative;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+#skills .container .card svg {
+	height: 160px;
+	width: 160px;
+}
+
+#skills .container .card svg circle {
+	fill: none;
+	stroke: rgb(85, 66, 71);
+	stroke-width: 10;
+	stroke-line-cap: round;
+	transform: rotateY(180deg) rotate(-90deg);
+	transform-origin: center;
+}
+
+#skills .container .card svg circle:nth-child(2) {
+	stroke-width: 30;
+	stroke-dasharray: 408;
+	stroke-dashoffset: 408;
+	stroke: rgb(243, 123, 131);
+}
+
+#skills .container .card.creativity svg circle:nth-child(2).animate {
+
+	animation: 2s animate-creativity-circle ease forwards;
+
+}
+
+@keyframes animate-creativity-circle {
+	0% {
+		stroke-dashoffset: 408;
+	}
+
+	100% {
+		stroke-dashoffset: 102;
+	}
+}
+
+#skills .container .card.cooking svg circle:nth-child(2).animate {
+
+	animation: 2s animate-cooking-circle ease forwards;
+
+}
+
+@keyframes animate-cooking-circle {
+	0% {
+		stroke-dashoffset: 408;
+	}
+
+	100% {
+		stroke-dashoffset: 135;
+	}
+}
+
+#skills .container .card.php svg circle:nth-child(2).animate {
+
+	animation: 2s animate-php-circle ease forwards;
+
+}
+
+@keyframes animate-php-circle {
+	0% {
+		stroke-dashoffset: 408;
+	}
+
+	100% {
+		stroke-dashoffset: 122;
+	}
+}
+
+#skills .container .card.photoshop svg circle:nth-child(2).animate {
+
+	animation: 2s animate-photoshop-circle ease forwards;
+
+}
+
+@keyframes animate-photoshop-circle {
+	0% {
+		stroke-dashoffset: 408;
+	}
+
+	100% {
+		stroke-dashoffset: 192;
+	}
+}
+#skills .card .number {
+	position: absolute;
+	top: 45px;
+}
+#skills #rectangular-skills-bars {
+	padding-top: 30px;
+}
 #skills #rectangular-skills-bars .wrapper {
 	padding: 15px 1px;
 }
 
 #skills #rectangular-skills-bars .progress-bar {
-
 	width: 80%;
 }
 
@@ -636,21 +771,61 @@ body {
 }
 
 #skills #rectangular-skills-bars .creativity .front {
-	width: 75%;
+	width: 0%;
 }
-
+#skills #rectangular-skills-bars .creativity .front.animate {
+	animation: animate-creativity-bar 2s ease forwards;
+}
+@keyframes animate-creativity-bar {
+	from {
+		0%;
+	}
+	to {
+		width: 75%;
+	}
+}
 #skills #rectangular-skills-bars .cooking .front {
-	width: 67%;
+	width: 0%;
 }
-
+#skills #rectangular-skills-bars .cooking .front.animate {
+	animation: animate-cooking-bar 2s ease forwards;
+}
+@keyframes animate-cooking-bar {
+	from {
+		0%;
+	}
+	to {
+		width: 67%;
+	}
+}
 #skills #rectangular-skills-bars .php .front {
-	width: 70%;
+	width: 0%;
 }
-
+#skills #rectangular-skills-bars .php .front.animate {
+	animation: animate-php-bar 2s ease forwards;
+}
+@keyframes animate-php-bar {
+	from {
+		0%;
+	}
+	to {
+		width: 70%;
+	}
+}
 #skills #rectangular-skills-bars .photoshop .front {
-	width: 53%;
+	width: 0%;
 }
-
+#skills #rectangular-skills-bars .photoshop .front.animate {
+	animation: animate-photoshop-bar 2s ease forwards;
+}
+@keyframes animate-photoshop-bar {
+	from {
+		0%;
+	}
+	to {
+		width: 53%;
+	}
+}
 #skills #rectangular-skills-bars .skill-rating {
 	display: block;
 	position: relative;
