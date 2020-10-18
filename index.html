@@ -14,78 +14,84 @@
 </head>
 
 <body onscroll="myFunction(); skillLoader();">
-	<div id="site-content-wrapper" class="container-fluid">
-		<div class="top-bar"> </div>
-		<div id="toggle-button">
-			<div class="button-line1"></div>
-			<div class="button-line2"></div>
-			<div class="button-line3"></div>
+
+	<div class="top-bar"> </div>
+	<div id="toggle-button">
+		<div class="button-line1"></div>
+		<div class="button-line2"></div>
+		<div class="button-line3"></div>
+	</div>
+
+	<div id="pagination">
+		<div id="current-number">01</div>
+		<div class="pagination-bar"></div>
+		<div class="total-number">06</div>
+	</div>
+
+	<!-- hidden menu side bar -->
+	<div id="hidden-menu-side-bar">
+		<div id="hidden-menu-wrapper">
+			<span><a href="#home" class="hidden-menu-link">home</a></span>
+			<span><a href="#services" class="hidden-menu-link">services</a></span>
+			<span><a href="#portfoilio" class="hidden-menu-link" onclick="maintain()">portfolio</a></span>
+			<span><a href="#resume" class="hidden-menu-link">resume</a></span>
+			<span><a href="#skills" class="hidden-menu-link">skills</a></span>
+			<span><a href="#contact" class="hidden-menu-link">contact</a></span>
 		</div>
-		<div id="pagination">
-			<div id="current-number">01</div>
-			<div class="pagination-bar"></div>
-			<div class="total-number">06</div>
-		</div>
+	</div>
 
-		<!-- hidden menu side bar -->
-		<div id="hidden-menu-side-bar">
-			<div id="hidden-menu-wrapper">
-				<span><a href="#">home</a></span>
-				<span><a>services</a></span>
-				<span><a>portfolio</a></span>
-				<span><a>resume</a></span>
-				<span><a>skills</a></span>
-				<span><a>contact</a></span>
-			</div>
-		</div>
-
-		<div id="left-content">
+	<div id="left-content">
 
 
-			<!-- Info side bar -->
-			<div id="info-side-bar">
-				<div id="my-info-wrapper">
-					<div class="my-info">
-						<p class="my-info-title">name</p>
-						<p class="my-info-content">themba dlamini</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">role</p>
-						<p class="my-info-content">developer</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">email</p>
-						<p class="my-info-content">thembadlamini365@gmail.com</p>
-					</div>
-					<div class="my-info">
-						<p class="my-info-title">phone</p>
-						<p class="my-info-content">+268 76425317</p>
-					</div>
+		<!-- Info side bar -->
+		<div id="info-side-bar">
+			<div id="my-info-wrapper">
+				<div class="my-info">
+					<p class="my-info-title">name</p>
+					<p class="my-info-content">themba dlamini</p>
 				</div>
-				<div class="signature">
-					<p>themba dlamini</p>
+				<div class="my-info">
+					<p class="my-info-title">role</p>
+					<p class="my-info-content">developer</p>
+				</div>
+				<div class="my-info">
+					<p class="my-info-title">email</p>
+					<p class="my-info-content">thembadlamini365@gmail.com</p>
+				</div>
+				<div class="my-info">
+					<p class="my-info-title">phone</p>
+					<p class="my-info-content">+268 76425317</p>
 				</div>
 			</div>
+			<div class="signature">
+				<p>themba dlamini</p>
+			</div>
 		</div>
-		<!-- Right side content -->
-		<div id="right-content">
-			<div id="home">
+	</div>
+
+	<!-- Right side content -->
+	<div id="right-content">
+		
+		<div id="home">
 				<div class="home-wrapper">
 					<div class="row is-flex">
 						<!-- Home left -->
-						<div id="home-left" class="col-sm-6">
+						<div id="home-left" class="col-sm-6 col-lg-5">
 							<p class="home-salutation">Hello. My name is</p>
 							<h3>themba dlamini</h3>
 							<p class="info small-text">A full stack all around designer that may or may not include a guide for specific creative potential methods who framing and evaluating moves.</p>
 							<div class="social-links"> <a>linkedin</a> <a>facebook</a> <a>instagram</a> </div>
 						</div>
 						<!-- Home right -->
-						<div id="home-right" class="col-sm-6">
+						<div id="home-right" class="col-sm-6 col-lg-7">
 							<div class="home-image-wrapper tile"> </div>
 						</div>
 					</div>
 				</div>
 			</div>
+		
+		<div class="right-wrapper">
+			
 			<div id="services">
 				<div class="services-wrapper">
 					<div class="row">
@@ -133,83 +139,88 @@
 			</div>
 			<!-- Start of portfolio -->
 			<div id="portfoilio">
-				<div class="filter-buttons">
-					<div id="humburger-button">
-						<div class="bar1"></div>
-						<div class="bar2"></div>
-						<div class="bar3"></div>
+				<div class="wrapper">
+					<div class="filter-buttons">
+						<div id="humburger-button">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+						<div class="dropdown-content"> <span class="filter-btn" onclick="filterSelection(event, 'all')">All</span>
+							<span class="filter-btn" onclick="filterSelection(event, 'girls')">Girls</span>
+							<span class="filter-btn" onclick="filterSelection(event, 'cars')">Cars</span>
+							<span class="filter-btn" onclick="filterSelection(event, 'nature')">Nature</span>
+						</div>
 					</div>
-					<div class="dropdown-content"> <span class="filter-btn" onclick="filterSelection(event, 'all')">All</span>
-						<span class="filter-btn" onclick="filterSelection(event, 'girls')">Girls</span>
-						<span class="filter-btn" onclick="filterSelection(event, 'cars')">Cars</span>
-						<span class="filter-btn" onclick="filterSelection(event, 'nature')">Nature</span>
+					<div class="galler-wrapper">
+					</div>
+					<div class="row is-flex">
+						<div class="column col-xs-12 col-sm-6 col-md-4 nature">
+							<div class="tile" style="background-image: url(img/nature1.jpg)">
+								<div class="overlay">
+									<h3>Nature</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 girls">
+							<div class="tile" style="background-image: url(img/girl1.jpg)">
+								<div class="overlay">
+									<h3>Girl</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 nature">
+							<div class="tile" style="background-image: url(img/nature2.jpg)">
+								<div class="overlay">
+									<h3>Nature</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 girls">
+							<div class="tile" style="background-image: url(img/girl2.jpg)">
+								<div class="overlay">
+									<h3>Girl</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 nature">
+							<div class="tile" style="background-image: url(img/nature3.jpg)">
+								<div class="overlay">
+									<h3>Nature</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 cars">
+							<div class="tile" style="background-image: url(img/car2.jpg)">
+								<div class="overlay">
+									<h3>Car</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 girls">
+							<div class="tile" style="background-image: url(img/girl3.jpg)">
+								<div class="overlay">
+									<h3>Girl</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 cars">
+							<div class="tile" style="background-image: url(img/car1.jpg)">
+								<div class="overlay">
+									<h3>Car</h3>
+								</div>
+							</div>
+						</div>
+						<div class="column col-xs-12 col-sm-6 col-md-4 nature">
+							<div class="tile" style="background-image: url(img/nature4.jpg)">
+								<div class="overlay">
+									<h3>Nature</h3>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="row is-flex">
-					<div class="column col-xs-12 col-sm-6 col-md-4 nature">
-						<div class="tile" style="background-image: url(img/nature1.jpg)">
-							<div class="overlay">
-								<h3>Nature</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 girls">
-						<div class="tile" style="background-image: url(img/girl1.jpg)">
-							<div class="overlay">
-								<h3>Girl</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 nature">
-						<div class="tile" style="background-image: url(img/nature2.jpg)">
-							<div class="overlay">
-								<h3>Nature</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 girls">
-						<div class="tile" style="background-image: url(img/girl2.jpg)">
-							<div class="overlay">
-								<h3>Girl</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 nature">
-						<div class="tile" style="background-image: url(img/nature3.jpg)">
-							<div class="overlay">
-								<h3>Nature</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 cars">
-						<div class="tile" style="background-image: url(img/car2.jpg)">
-							<div class="overlay">
-								<h3>Car</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 girls">
-						<div class="tile" style="background-image: url(img/girl3.jpg)">
-							<div class="overlay">
-								<h3>Girl</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 cars">
-						<div class="tile" style="background-image: url(img/car1.jpg)">
-							<div class="overlay">
-								<h3>Car</h3>
-							</div>
-						</div>
-					</div>
-					<div class="column col-xs-12 col-sm-6 col-md-4 nature">
-						<div class="tile" style="background-image: url(img/nature4.jpg)">
-							<div class="overlay">
-								<h3>Nature</h3>
-							</div>
-						</div>
-					</div>
-				</div>
+
 			</div> <!-- End portfolio -->
 
 			<div id="resume">
@@ -467,7 +478,9 @@
 				</div>
 			</div>
 		</div><!-- End of right side content -->
+
 	</div>
+
 
 	<script>
 		// Show filtered elements
@@ -531,10 +544,8 @@
 				isMenuOpen = false;
 			}
 		}) //End
-
 	</script>
 	<script src="js/pagination.js"></script>
 	<script src="js/animate_counters.js"></script>
-</body>
-
-</html>
+	<script src="js/maintain_layout.js"></script>
+</body></html>

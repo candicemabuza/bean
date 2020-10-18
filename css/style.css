@@ -2,6 +2,9 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+html {
+		scroll-behavior: smooth;
+}
 
 :root {
 	--darkest-color: #302729;
@@ -12,6 +15,9 @@
 	--progress-backround: #554247;
 	--left-side-width: 90px;
 	--left-padding: 15px;
+	--right-padding-phone: 10px;
+	--right-padding-tablet: 100px;
+	--right-padding-laptop: 230px;
 	--circle-circumference: calc(130*3.14);
 }
 
@@ -28,6 +34,8 @@ body {
 	color: var(--lightest-color);
 	background-color: var(--darkest-color);
 	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
 }
 
 /* site content wrapper with flex display */
@@ -51,7 +59,7 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 0;
+	z-index: 1;
 	width: var(--left-side-width);
 	display: none;
 	-webkit-transition: display 0.5s;
@@ -66,7 +74,7 @@ body {
 	position: fixed;
 	height: 100%;
 	width: 220px;
-	z-index: 1;
+	z-index: 2;
 	-webkit-transform: translateX(-220px);
 	transform: translateX(-220px);
 	-webkit-transition: 0.5s;
@@ -91,6 +99,18 @@ body {
 	font-size: 20px;
 	font-weight: 700;
 }
+#hidden-menu-side-bar span a::after {
+	content: "";
+	display: block;
+	background-color: var(--less-dark-color);
+	width: 0%;
+	height: 3px;
+	opacity: 0.4;
+	transition: 0.4s;
+}
+#hidden-menu-side-bar span a:hover::after {
+	width: 50%;
+}
 
 /* Tpo bar*/
 .top-bar {
@@ -100,7 +120,7 @@ body {
 	height: 40px;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 }
 
 /* Toggle button */
@@ -109,7 +129,7 @@ body {
 	position: fixed;
 	left: 20px;
 	top: 7px;
-	z-index: 1;
+	z-index: 3;
 	cursor: pointer;
 }
 
@@ -166,7 +186,7 @@ body {
 	position: fixed;
 	right: 20px;
 	top: 5px;
-	z-index: 1;
+	z-index: 3;
 }
 
 #pagination div {
@@ -180,17 +200,11 @@ body {
 	margin: 3px 2px;
 	background-color: var(--white-color);
 }
-
-#pagination div.current-number {}
-
 #pagination div.total-number {
 	color: var(--white-color);
 }
-
 #right-content {
-	position: absolute;
-	z-index: -1;
-	width: 97%;
+	width: 100%;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
@@ -223,10 +237,13 @@ body {
 	padding-left: 20px;
 	font-size: 25px;
 }
-
+#right-content .home-wrapper {
+width: 98vw;
+}
 #right-content #home-left {
 	background-color: var(--white-color);
 	padding: 40px;
+	margin-right: -16px;
 }
 
 #right-content #home-left .home-salutation {
@@ -274,7 +291,6 @@ body {
 	background-image: url("../img/girl33.jpg");
 	width: 100%;
 	height: 100%;
-	margin-left: -15px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -285,6 +301,7 @@ body {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	padding-left: var(--left-padding);
+	padding-right: var(--right-padding-phone);
 }
 
 #right-content #services .box {
@@ -348,11 +365,12 @@ body {
 #right-content #portfoilio {
 	padding-left: var(--left-padding);
 	position: relative;
+	padding-right: var(--right-padding-phone);
 }
 
 #right-content #portfoilio .filter-buttons {
 	position: absolute;
-	right: 0px;
+	right: var(--right-padding-phone);
 	top: -10px;
 	z-index: 1;
 	cursor: pointer;
@@ -477,8 +495,6 @@ body {
 	transition: 0.5s;
 }
 
-#right-content #portfoilio .active {}
-
 #right-content #portfoilio .show {
 	animation: smooth-show 1s ease;
 }
@@ -527,6 +543,7 @@ body {
 
 #resume {
 	padding-left: var(--left-padding);
+	padding-right: var(--right-padding-phone);
 }
 
 #resume .timeline-holder {
@@ -631,6 +648,7 @@ body {
 
 #skills {
 	padding-left: var(--left-padding);
+	padding-right: var(--right-padding-phone);
 }
 
 #skills .container {
@@ -643,7 +661,7 @@ body {
 	flex-direction: row;
 	-ms-flex-line-pack: distribute;
 	align-content: space-around;
-	padding: 10px 10px;
+	padding-top: 10px;
 	margin-top: 20px;
 	width: 100%;
 }
@@ -666,7 +684,6 @@ body {
 	fill: none;
 	stroke: rgb(85, 66, 71);
 	stroke-width: 10;
-	stroke-line-cap: round;
 	transform: rotateY(180deg) rotate(-90deg);
 	transform-origin: center;
 }
@@ -843,6 +860,7 @@ body {
 	padding-left: var(--left-padding);
 	margin-bottom: 40px;
 	margin-top: 40px;
+	padding-right: var(--right-padding-phone);
 }
 
 #contact .contact-info span {
@@ -862,12 +880,12 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	padding: 40px;
+	padding: 40px 20px;
 	background-color: var(--less-light-color);
 }
 
 #contact form * {
-	width: 80%;
+	width: 90%;
 	background-color: transparent;
 	outline: none;
 	border: none;
@@ -906,11 +924,6 @@ body {
 	#right-content #home-left .social-links a:not(:first-child) {
 		margin-left: 30px;
 	}
-
-	#site-content-wrapper {
-		margin-top: 0;
-	}
-
 	/* Display left content and make it block */
 	#left-content {
 		display: block;
@@ -923,19 +936,17 @@ body {
 	#toggle-button {
 		left: 30px;
 		top: 25px;
-		z-index: 2;
+		z-index: 3;
 	}
 
-	#right-content {
-		left: var(--left-side-width);
+	#right-content .right-wrapper {
+		margin-left: var(--left-side-width);
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
 	}
 
 	#right-content #home-right {
 		display: block;
-	}
-
-	#right-content #services .services-wrapper {
-		padding-right: 80px;
 	}
 
 	.row.is-flex {
@@ -955,22 +966,10 @@ body {
 		-ms-flex-direction: column;
 		flex-direction: column;
 	}
-
-	#right-content #portfoilio,
-	#resume,
-	#skills,
-	#contact {
-		padding-right: 80px;
-	}
-
-	#right-content #portfoilio .filter-buttons {
-		right: 80px;
-	}
-}
-
-@media only screen and (min-width: 992px) {
-	#skills {
-		padding-right: 20px;
+	#right-content .home-wrapper {
+		margin-left: var(--left-side-width);
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
 	}
 }
 
@@ -985,27 +984,14 @@ body {
 		transition: 0.5s;
 	}
 
-	#right-content {
-		left: 220px;
+	#right-content .right-wrapper, #right-content .home-wrapper {
+		margin-left: 220px;
 		-webkit-transition: 0.5s;
 		transition: 0.5s;
 	}
-
-	#right-content #portfoilio,
-	#skills,
-	#resume,
-	#right-content #services .services-wrapper,
-	#contact {
-		padding-right: 200px;
-	}
-
-	#right-content #portfoilio .filter-buttons {
-		right: 200px;
-	}
-
 	#pagination {
 		display: block;
 		left: 20px;
-		top: 130px;
+		top: 100px;
 	}
 }

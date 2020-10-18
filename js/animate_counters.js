@@ -1,5 +1,3 @@
-// Get the sections
-skillLoader();
 
 function skillLoader() {
   var section = document.querySelector('#skills');
@@ -50,3 +48,6 @@ function animateCounters(counter) {
     }, animationLength);
   }
 }
+//if (window.innerWidth >= 1200){
+  //document.getElementById("right-content").style.left="500px";
+//}
